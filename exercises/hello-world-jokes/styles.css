@@ -1,0 +1,27 @@
+h1 {
+    background-color: burlywood;
+    color: blue;
+    text-align: center;
+}
+
+li{
+    text-align: center;
+    font-size: 25px;
+    line-height: 25px;
+}
+
+#knot {
+    background-color: cyan;
+    color: green;
+
+}
+
+#drugs{
+    background-color: darksalmon;
+    color: darkred;
+}
+
+#stick{
+    background-color: darkkhaki;
+    color: darkblue;
+}
