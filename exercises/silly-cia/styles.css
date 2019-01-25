@@ -1,0 +1,47 @@
+#mainHeadline {
+    color: darkgreen;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+#secondHeadline {
+    text-align: center;
+
+}
+
+#paragraphs{
+    line-height: 25px;
+    font-size: 25px;
+}
+
+#links {
+    text-decoration: unset;
+    font-size: 25px;
+    
+}
+
+#links:hover{
+    text-decoration: underline; 
+}
+
+#case {
+    text-transform: uppercase;
+}
+
+img {
+    float: left;
+    width: auto;
+    height: auto;
+    margin: 25px;
+}
+
+
+
+/* Make the main headline dark green.
+Use the font family "Georgia" for the main headline and the sub-headline.
+Center the text of the main headline and the sub-headline.
+Make the paragraphs have a line height of 25 pixels.
+Remove the underline from the links.
+Make the "You might also like" label all uppercase.
+Bonus: Make an underline appear when you hover over a link.
+Bonus: Make the image 'float' to the left of the body content. */
