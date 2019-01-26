@@ -1,0 +1,42 @@
+* {
+    margin: 0px;
+    border-style: solid;
+    border-color: black;
+    border-width: 0.1px;
+    
+}
+
+body{
+    background-color: antiquewhite;
+    
+    margin-left: 10%;
+    margin-right: 10%;
+
+}
+
+header{
+   text-align: center;
+   font-size: 75px;
+   text-shadow: 2px 3px darkgrey;
+   font-family: cursive;
+   border: none;
+}
+
+main{
+    text-align: center;
+}
+article{
+    display: inline-block;
+}
+p{
+    border: none;
+    text-align: left;
+    font-size: 20px
+}
+
+footer{
+    text-align: center;
+    font-family: fantasy;
+    text-shadow: 2px 3px darkgrey;
+    font-size: 55px;
+}
