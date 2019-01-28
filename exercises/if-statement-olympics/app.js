@@ -96,11 +96,37 @@ if ("cat" === "dog"){
 //     console.log("broken")
 // }
 
-if( undeclaredVariable==='undefined'){
-    console.log("undefined")
+// if( undeclaredVariable==='undefined'){
+//     console.log("undefined")
+// } else{
+//     console.log("broken")
+// }
+
+// if("a">= 10){
+//     console.log("yes")
+// } else if("a"<=10){
+//     console.log("yes 2")
+// } else{
+//     console.log("broken")
+// }
+
+var s = "s"
+if(s>5){
+    console.log("s is greater than 5")
+} else if("s" <= 5){
+    console.log("s is not greater than 5")
 } else{
-    console.log("broken")
+    console.log("the code is not working")
 }
+
+
+// for(var i=0; i<=15; i++){
+//     if(i%2 === 0){
+//         console.log(i + " is an even number")
+//     } else{
+//         console.log(i + " is an odd number")
+//     }
+// }
 
 //  1) Write an if statement that checks to see if "dog" is a string
 //  2) Write an if statement that checks to see if "true" is a boolean

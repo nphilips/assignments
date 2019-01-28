@@ -44,7 +44,7 @@
 // 3) Write a for loop that will push every other fruit to an array.
 */}
 
-{/*
+{/* Silver
 // var peopleArray = [
 //     {
 //       name: "Harrison Ford",
@@ -94,5 +94,40 @@
 // 3) Write a loop that pushes every other name to an array starting with "Harrison Ford", 
 //    and every other occupation to another array starting with "Singer".
 */}
+
+var peopleArr = [
+    {
+      name: "Mike",
+      age: 12,
+      gender: "male"
+    },{
+      name: "Madeline",
+      age: 80,
+      gender: "female"
+    },{
+      name: "Cheryl",
+      age: 22,
+      gender: "female"
+    },{
+      name: "Sam",
+      age: 30,
+      gender: "male"
+    },{
+      name: "Suzy",
+      age: 4,
+      gender: "female"
+    }
+  ] 
+
+
+// for (var i=0; i < peopleArr.length; i++){
+//     if(peopleArr[i].age >= 18){
+//         console.log(peopleArr[i].name + " is old enough to watch the movie.")
+//     } else{
+//         console.log(peopleArr[i].name + " is not old enough to watch the movie.")
+//     }
+// }
+
+
 
 
