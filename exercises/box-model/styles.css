@@ -1,0 +1,14 @@
+*{
+    background-color: antiquewhite;
+}
+
+body{
+    background-color: aquamarine;
+}
+
+div{
+    border: solid red 5px;
+    width: 200px;
+    height: 100px;
+    box-sizing: border-box;
+}
