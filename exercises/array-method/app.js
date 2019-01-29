@@ -1,8 +1,18 @@
 var fruit = ["banana", "apple", "orange", "watermelon"];
 var vegetables = ["carrot", "tomato", "pepper", "lettuce"];
 
-vegetables.pop();
-fruit.shift();
+var indexOfOrange = fruit.indexOf("orange")
 
-console.log("vegetables: " + vegetables)
-console.log("fruit: " + fruit)
+vegetables.pop();
+vegetables.push(vegetables.length);
+fruit.shift();
+fruit.push(indexOfOrange);
+
+//console.log("vegetables: " + vegetables)
+//console.log("fruit: " + fruit)
+
+var food = fruit.concat(vegetables)
+food.splice(4,2);
+food.reverse();
+
+console.log(food.join())
