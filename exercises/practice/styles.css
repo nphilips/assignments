@@ -22,3 +22,7 @@ article{
     display: inline-block;
 }
 
+#article-two{
+    position: relative;
+    top: 100px;
+}

@@ -1,0 +1,79 @@
+*{
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: antiquewhite;
+  }
+  
+  .title-container {
+    
+    background-image: url("coffee-collection.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: black;
+    padding: 100px;
+    text-align: center;
+    font-family: fantasy;
+    height: 300px;
+    
+  }
+  
+  .navBar {
+        border: solid black;
+        border-width: 5px;
+        /* border-radius: 10px; */
+        border-bottom-left-radius: 25px;
+        border-bottom-right-radius: 25px; 
+        padding: 10px 16px;
+        background: burlywood;
+        color: darkblue;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        text-align: center;
+  }
+  
+  .content {
+
+    display: inline-block;
+    border: solid darkorchid;
+    border-radius: 25px;
+    border-width: 15px;
+    margin-top: 25px;
+    margin-left: 25%;
+    margin-right: 25%;
+    padding: 16px;
+    text-align: center;
+  }
+  
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  
+  .sticky + .content {
+    padding-top: 102px;
+  }
+
+  h1{
+      font-size: 500%;
+      font-weight: bolder;
+  }
+
+  h2{
+      font-size: 200%;
+  }
+
+.ipsum{
+    /* margin-left: 25%;
+    margin-right: 25%; */
+    font-size: 150%;
+}
+
+img.breakfast{
+    max-width: 40%;
+    border-radius: 10%;
+}
