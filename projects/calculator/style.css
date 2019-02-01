@@ -1,0 +1,9 @@
+*{
+    background-color: antiquewhite;
+    text-align: center;
+}
+
+form{
+    display: inline-block;
+    margin: 3%;
+}

@@ -1,5 +1,5 @@
 *{
-    margin: 0px;
+    margin: 50px;
     box-sizing: border-box;
 }
 
@@ -19,6 +19,6 @@ h1{
 
 article{
     width: 33%;
-    display: inline-block;
+    /* display: inline-block; */
 }
 
