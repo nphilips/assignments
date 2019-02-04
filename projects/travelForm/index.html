@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles.css">
+    <title>form</title>
+</head>
+<body>
+    <h1>Travel Form</h1>
+
+    <form name="travelForm">
+        <h3>Please enter your first name:</h3>
+        First Name: <input type="text" name="firstName" ><br>
+        <h3>Please enter your last name:</h3>
+        Last Name: <input type="text" name="lastName" ><br>
+        <h3>Please enter your age:</h3>
+        Age: <input type="number" name="age"><br>
+        <h3>Please select your gender:</h3>
+        Male: <input type="radio" name="gender" value="male">
+        Female: <input type="radio" name="gender" value="female"><br>
+
+        <h3>Select your Destinations: </h3><br> 
+
+        The Sun: <input type="checkbox" value="The Sun" name="destination">
+        Fillory: <input type="checkbox" value="Fillory" name="destination">
+        Atlantis: <input type="checkbox" value="Atlantis" name="destination">
+        Fantastica: <input type="checkbox" value="Fantastica" name="destination">
+        Neverland: <input type="checkbox" value="Neverland" name="destination">
+
+        <h3>Select all dietary restrictions that apply: </h3>
+
+        Pudding: <input type="checkbox" value="Pudding" name="dietaryRestrictions">
+        Pizza: <input type="checkbox" value="Pizza" name="dietaryRestrictions">
+        Plumbus: <input type="checkbox" value="Plumbus" name="dietaryRestrictions">
+        Soylent Green: <input type="checkbox" value="Soylent Green" name="dietaryRestrictions"><br>
+        
+        
+        <button>Submit Travel Form</button>
+    </form>
+
+    <div id="finishedForm">
+
+    </div>
+
+
+
+    <script src="app.js"></script>
+</body>
+</html>

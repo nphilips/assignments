@@ -1,25 +1,72 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles.css">
+    <title>form</title>
+</head>
+<body>
+    <h1> To do List</h1>
+
+    <form name="todoForm">
+        <input type="text" name="title" >
+        <button>Submit</button>
+    </form>
+
+    <div id="todo-list">
+
+    </div>
+
+
+
+    <script src="app.js"></script>
+</body>
+</html> -->
+<!-- //////////////////////////////// -->
+
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link rel="stylesheet" href="styles.css">
-        <title>HTML Forms pt. 1</title>
-    </head>
-    <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles.css">
+    <title>form</title>
+</head>
+<body>
+    <h1> To do List</h1>
+
+    <form name="todoForm">
+        <!-- <input type="text" name="title" > -->
+        <!-- <h1>Chocolate or Skittles?</h1> -->
+        <!-- <input type="radio" name="favCandy" value="Chocolate">
+        <input type="radio" name="favCandy" value="Skittles"> -->
+        <select name="favMovies">
+            <option value="die-hard">Die Hard</option>
+            <option value="blade-runner">Blade Runner</option>
+            <option value="maniac">Maniac</option>
+            <option value="frozen">Frozen</option>
+            <option value="the-great-hack">The Great Hack</option>
+        </select>
+
+        <h1>What is the meaning of life (choose all that apply)</h1>
+        42: <input type="checkbox" value="42" name="lifeMeaning">
+        no meaning: <input type="checkbox" value="No Meaning" name="lifeMeaning">
+        pasta: <input type="checkbox" value="pasta" name="lifeMeaning">
+        alchohol: <input type="checkbox" value="alchohol" name="lifeMeaning">
         
-        <h1>
-            HTML Forms pt. 1
-        </h1>
-        <form action=""></form>
+        <button>Submit</button>
+    </form>
 
-        <form name="myform">
-            <input type="text" placeholder="Name" name="name-input" required/>
-            <input type="number" placeholder="Age" name="age"/>
-            <button>I"M A BUTTON!</button>
-        </form>
+    <div id="todo-list">
 
-        <script src="app.js"></script>
-    </body>
+    </div>
+
+
+
+    <script src="app.js"></script>
+</body>
 </html>
+
