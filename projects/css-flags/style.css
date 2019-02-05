@@ -1,24 +1,55 @@
 *{
-    margin: 50px;
+    margin: 0pt;
     box-sizing: border-box;
 }
-
 body{
-    margin: 20px;
-}
-body h1{
-
+    background: antiquewhite;
 }
 
-h1{
-    text-align: center;
-    background-color: black;
-    color: white;
-    padding: 10px;
+#greece .flag{
+    width: 600pt;
+    height: 360pt;
+    background: white;
 }
 
-article{
-    width: 33%;
-    /* display: inline-block; */
+#greece .stripes{
+    background: blue;
+    margin-bottom: 40pt;
+    width: auto;
+    height: 40pt;
 }
+#greece .bottom{
+    margin-bottom: none;
+}
+
+#greece .cross{
+    display: inline-block;
+    background: blue;
+    position: absolute;
+    width: 200pt;
+    height: 200pt;
+    top: 56pt;
+}
+
+#greece .horizontal{
+    background: white;
+    height: 40pt;
+    width: 200pt;
+    position: relative;
+    top: 80pt;
+}
+
+#greece .vertical{
+    background: white;
+    width: 40pt;
+    height: 200pt;
+    position: absolute;
+    top: 0;
+    left: 80pt;
+}
+
+
+
+
+
 

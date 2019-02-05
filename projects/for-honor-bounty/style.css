@@ -1,0 +1,45 @@
+*{
+    /* text-align: center; */
+    /* display: inline-block; */
+    font-family: fantasy;
+    font-size: 25pt;
+    margin: 0pt;
+    color: goldenrod;
+    text-shadow: 2pt 2pt 4pt black;
+}
+
+body{
+    background-image: url(for-honor-bg.jpg);
+    margin: 0 20%;
+    /* background-size: cover;
+    background-repeat: no-repeat; */
+}
+
+.pic{
+    width:100pt;
+    border-radius: 5pt;
+}
+
+.soldier{
+    float:right;
+}
+
+
+.align{
+    flex: auto
+}
+input{
+    background: black;
+    border-color: silver;
+    border-radius: 25pt;
+    width: 100pt;
+    text-align:center;
+}
+.button{
+    background:black;
+    border-color: silver;
+    border-radius:30pt;
+    text-align: center;
+    padding: 8pt;
+}
+
