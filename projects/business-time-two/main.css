@@ -1,0 +1,162 @@
+*{
+    margin: 0;
+    /* max-width: 100%; */
+}
+
+#homeBackground{
+    background: url(fire-and-ice.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#contactBackground{
+    background: url(contacts.jpg);
+    background-size: cover;
+    background-position: center;   
+}
+
+#aboutBackground{
+    background: url(https://images.unsplash.com/photo-1494256997604-768d1f608cac?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2901&q=80);
+    background-size: cover;
+    background-position: center;
+}
+
+.title{
+    color: #fdf9f3;
+    /* text-align: center; */
+    text-shadow: 2pt 2pt 15pt black;
+    padding: 15pt;
+    max-width: 100%;
+    height: 50pt;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 4vh;
+    border: solid black;
+    border-width: 2pt;
+    
+}
+
+.navBar {
+    border: solid blue;
+    border-width: 5px;
+    border-bottom-left-radius: 25pt;
+    border-bottom-right-radius: 25pt; 
+    padding: 5pt;
+    background: black;
+    color: lime;
+    font-family: 'Cinzel Decorative', cursive;
+    text-align: center;
+}
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.sticky + .content {
+    /* padding-top: 10pt; */
+}
+
+nav{
+    color: lime;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    font-size: 3vh;
+}
+
+body{
+    background: black;
+    text-align: center;
+    
+}
+
+.articles{
+    color: green;
+    font-size: 3vh;
+    display: inline-flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    padding: 15pt;
+}
+.spanTag{
+    color: blue;
+    display: inline-block;
+    justify-content: space-evenly;
+    padding: 25pt;
+}
+
+.picOne{
+    max-width: 50vh;
+    height: ;
+    background: url(https://images.unsplash.com/photo-1494256997604-768d1f608cac?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2901&q=80);
+    background-size: cover;
+    background-position: center;
+}
+
+.pic{
+    /* align-items: center; */
+    max-width:50vh;
+    height: auto;
+    padding: 5%;
+}
+
+@media(min-width: 750px){
+    .title{
+        font-size: 8vh;
+        padding: 40pt;
+        height: 100pt;
+    }
+    .navBar{
+        padding: 10pt;
+        font-size: 4vh;
+
+    }
+
+    #aboutText{
+        display: flex;
+        flex-direction: column;
+        text-align: center
+    }
+
+    #contactText{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .articles{
+        /* font-size: 200%; */
+        max-width: 100%;
+        display: inline-flex;
+        justify-content: space-around;
+        padding: 8%;
+    }
+    .pic{
+        padding: 5%;
+    }
+}
+
+@media(min-width: 1500px){
+    .title{
+        /* font-size: 1000%; */
+        height: 100%;
+    }
+    .navBar{
+        padding: 20pt;
+        /* font-size: 400%; */
+    }
+    
+    .articles{
+        padding: 50pt;
+        /* font-size: 300%; */
+        max-width: 100%;
+        display: inline-flex;
+        justify-content: space-evenly;
+    }
+    
+    .pic{
+        max-width: 50%;
+        /* height: 3vh; */
+    }
+    
+}

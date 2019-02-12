@@ -1,0 +1,73 @@
+{
+    "store": "JSON Pasta",
+    "menu": {
+        "Pasta":[
+            {
+                "name": "spagetti",
+                "ingredients": ["spagetti noodle", "red sauce"],
+                "description": "awesome spagetti"
+            },
+            {
+                "name": "macaroni",
+                "ingredients": ["rigatoni noodle", "cheese sauce"],
+                "description": "awesome macaroni"
+            },
+            {
+                "name": "pene fungi",
+                "ingredients": ["pene noodle", "white sauce", "mushrooms"],
+                "description": "awesome mushroom pasta"
+            }
+        ],
+        "cold sandwiches": [
+            {
+                "name":"ham",
+                "ingredients":["bread","ham","other stuff"],
+                "description": "delicious!"
+            },
+            {
+                "name":"bologna",
+                "ingredients":["bread","bologna","other stuff"],
+                "description": "It's alright!"
+            },
+            {
+                "name":"lox",
+                "ingredients":["begal","salmon","other stuff"],
+                "description": "magically delicious!"
+            }
+        ],
+        "hot sandwiches": [
+            {
+                "name":"grilled cheese",
+                "ingredients":["bread","cheese","other stuff"],
+                "description": "delicious!"
+            },
+            {
+                "name":"blt",
+                "ingredients":["bread","bacon","other stuff"],
+                "description": "It's great!"
+            },
+            {
+                "name":"meatball sub",
+                "ingredients":["bread","meatballs","other stuff"],
+                "description": "wonderfully delicious!"
+            }
+        ],
+        "desserts": [
+            {
+                "name":"brownies",
+                "ingredients":["cocoa","flower","other stuff"],
+                "description": "amazing!"
+            },
+            {
+                "name":"chocolate icecream",
+                "ingredients":["milk","chocolate","other stuff"],
+                "description": "It's to die for!"
+            },
+            {
+                "name":"guilt free dish",
+                "ingredients":["unknown","not telling","other stuff"],
+                "description": "don't worry about the ingredients!"
+            }
+        ]
+    }
+}

@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+}
+
+.title{
+    margin-top: 10%;
+    text-align: center;
+    color: lime;
+    padding: 25pt;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 6vh;
+    max-width: 100%;
+    text-shadow: 1pt 1pt 100pt lime;
+}
+
+body{
+    background: black;
+}
+
+.start{
+    
+    float:right;
+    margin-top:25%; 
+    margin-right: 10%;
+    font-size: 4vh;
+    font-family: 'Press Start 2P', cursive;
+    background: black;
+    color: white;
+    text-align: center;
+    border:solid white;
+    border-radius: 25pt;
+    border-width: 5pt;
+    padding: 15pt;
+    
+}
+
+@media(min-width: 400px){
+    .title{
+        /* font-size: 250%; */
+    }
+    .start{
+        margin-top: 20%;
+        /* font-size: 200%; */
+    }
+}
+
+@media(min-width: 750px){
+    .title{
+        /* font-size: 475%; */
+    }
+    .start{
+        /* font-size: 400%; */
+    }
+}
+
+@media(min-width: 2200px){
+    .title{
+        /* font-size: 700%; */
+    }
+    .start{
+        /* font-size: 1000%; */
+        margin: 25%;
+    }
+}
