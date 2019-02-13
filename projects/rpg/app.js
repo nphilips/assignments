@@ -16,7 +16,7 @@ var lovedOne ={
 
 var player = {
     name: '',
-    health: 100,
+    health: 200,
     inventory:[
         {
             potion: 1
@@ -27,119 +27,106 @@ var player = {
     baseAttack: 1
 }
 
+var boss = {
+    name: "Shade",
+    health: 300,
+    baseAttack:15
+}
+
 var monster = [
     {
         name: "Minotaur",
         health: 25,
-        // inventory: [{weapon: 1}],
         baseAttack: 0
     },
     {
         name: "Minotaur",
         health: 25,
-        // inventory: [{weapon: 1}],
         baseAttack: 0
     },
     {
         name: "Minotaur",
         health: 25,
-        // inventory: [{weapon: 1}],
         baseAttack: 0
     },
     {
         name: "Minotaur",
         health: 25,
-        // inventory: [{weapon: 1}],
         baseAttack: 0
     },
     {
         name: "Minotaur",
         health: 25,
-        // inventory: [{weapon: 1}],
         baseAttack: 0
     },
     {
         name: "Minotaur",
         health: 25,
-        // inventory: [{weapon: 1}],
         baseAttack: 0
     },
     {
         name: "Minotaur",
-        health: 25,
-    //  inventory: [{weapon: 1}],
+        health: 25
         baseAttack: 0
     },
     {
         name: "Minotaur",
-        health: 25,
-    //  inventory: [{weapon: 1}],
+        health: 25
         baseAttack: 0
     },
     {
         name: "Minotaur",
-        health: 25,
-    //  inventory: [{weapon: 1}],
+        health: 25
         baseAttack: 0
     },
     {
         name: "Cerberus",
         health: 30,
-        // inventory: [{weapon: 1}],
         baseAttack: 2
     },
     {
         name: "Cerberus",
         health: 30,
-        // inventory: [{weapon: 1}],
         baseAttack: 2
     },
     {
         name: "Cerberus",
         health: 30,
-        // inventory: [{weapon: 1}],
         baseAttack: 2
     },
     {
         name: "Cerberus",
         health: 30,
-        // inventory: [{weapon: 1}],
         baseAttack: 2
     },
     {
         name: "Cerberus",
         health: 30,
-        // inventory: [{weapon: 1}],
         baseAttack: 2
     },
     {
         name: "Hydra",
         health: 30,
-        // inventory: [{potion: 1}],
         baseAttack: 6
     },
     {
         name: "Hydra",
         health: 30,
-        // inventory: [{potion: 1}],
         baseAttack: 6
     },
     {
         name: "Hydra",
         health: 30,
-        // inventory: [{potion: 1}],
         baseAttack: 6
     },
     {
         name: "Hydra",
         health: 30,
-        // inventory: [{potion: 1}],
         baseAttack: 6
     },
     {
         name: "Hydra",
         health: 30,
-        // inventory: [{potion: 1}],
         baseAttack: 6
     },
     {
@@ -235,9 +222,9 @@ function monsterSummon(summonedMonster){
 ///////////
 function monsterBattle(battleMonster, summonedMonster){
     battleMonster.health += player.inventory[1].weapon*10
-    console.log(battleMonster.health)
+    console.log(battleMonster.name + "health: " + battleMonster.health)
     while(battleMonster.health > 0 && player.health > 0 && run === false){
-        var attackOptions = ["Run!", "Fight!", "Drink Potion", "Turn around"]
+        var attackOptions = ["Run!", "Fight!", "Drink Potion","Stats", "Turn around"]
         var battleChoice = ask.keyInSelect(attackOptions, "     [SHADE] What should we do? ")
         if(battleChoice === 0){
             if(ask.keyInYN("\n     [SHADE] Are you sure You want to run?")){
@@ -248,8 +235,10 @@ function monsterBattle(battleMonster, summonedMonster){
         }else if(battleChoice === 2){
             drinkPotion()
         }else if(battleChoice === 3){
+            stats()
+        }else if(battleChoice === 4){
             turnAround()
-        }else if(choice === -1){
+        }else if(battleChoice === -1){
             if(ask.keyInYN("\n     [SHADE] Abandon " + lovedOne.name + " forever?")){
                 turnAround()
             }
@@ -267,8 +256,28 @@ function bossFight(){
     sleep.msleep(1000)
     console.log("\n     A reaper's sythe appears from within the Shade's coat.")
     sleep.msleep(1500)
-    console.log("\n     [BOSS SHADE] TIME TO DIE!!")
-    gameOver = true
+    console.log("\n     [BOSS SHADE] TIME TO DIE!! \n")
+
+
+    console.log(boss.name + "Health: " + boss.health)
+    while(boss.health > 0 && player.health > 0){
+        var attackOptions = ["Fight!", "Drink Potion", "Stats", "Turn around"]
+        var battleChoice = ask.keyInSelect(attackOptions, "     [" + lovedOne.name + "]   What will you do? ")
+        if(battleChoice === 0){
+            attackOnBoss(boss)
+        }else if(battleChoice === 1){
+            drinkPotion()
+        }else if(battleChoice === 2){
+            stats()
+        }else if(battleChoice === 3){
+            turnAround()
+        }else if(battleChoice === -1){
+            if(ask.keyInYN("\n     [SHADE] Abandon " + lovedOne.name + " forever?")){
+                turnAround()
+            }
+        }
+    }
+    // gameOver = true
 }
 
 ////////////
@@ -303,6 +312,45 @@ function runAway(){
     }
 }
 
+/////////////////////
+///ATTACK ON BOSS///
+///////////////////
+function attackOnBoss(boss){
+    var attackDamage = Math.ceil(Math.random() * 9) + player.baseAttack
+    boss.health -= attackDamage
+    console.log("\n     [" + lovedOne.name + "]   You hit the " + boss.name + " for " + attackDamage + " points")
+    if(boss.health <= 0){
+        console.log("\n     [" + lovedOne.name + "]   You killed the " + boss.name)
+        sleep.msleep(2000)
+        console.log("\n     [ORPHEUS] You have done what I could not.")
+        sleep.msleep(1000)
+        console.log("\n     [ORPHEUS] Congradulations " + player.name + " on completing your adventure!")
+        sleep.msleep(1000)
+        console.log("\n     [ORPHEUS] Enjoy the rest of you life with " + lovedOne.name + "!")
+        sleep.msleep(1000)
+        credits()
+
+    }else if(boss.health >0){
+        bossAttack(boss)
+    } 
+}
+
+//////////////////
+///BOSS ATTACK///
+////////////////
+function bossAttack(){
+    var attackDamage = Math.ceil(Math.random() * 25) + boss.baseAttack
+    console.log("\n     [" + lovedOne.name + "]   " + boss.name + " hit you for " + attackDamage + " points!")
+    player.health -= attackDamage
+    if(player.health <=0){
+        console.log("\n     [" + lovedOne.name + "] The " + boss.name + " killed you.")
+        sleep.msleep(1000)
+        console.log("\n     [SHADE] You have failed " + lovedOne.name +". Their soul will reside with Hades for all eternity.")
+        sleep.msleep(1500)
+        gameOver = true
+    }
+}
+
 /////////////
 ///ATTACK///
 ///////////
@@ -314,6 +362,10 @@ function attack(battleMonster){
     if(battleMonster.health <= 0){
         console.log("\n     [SHADE] You killed the " + battleMonster.name)
         if(battleMonster === monster[monster.length-1]){
+            console.log("\n     [SHADE] You acquired the Holy Hand Grenade!")
+            sleep.msleep(1000)
+            console.log("\n     [SHADE] You gained 20 base attack!")
+            player.baseAttack += 20
             hasGrenade=true
         }
         if(itemChance === 0 || itemChance === 2){
@@ -326,16 +378,14 @@ function attack(battleMonster){
         } 
     }else if(battleMonster.health >0){
         monsterAttack(battleMonster)
-    }
-        
-        
+    }   
 }
 
 /////////////////////
 ///MONSTER ATTACK///
 ///////////////////
 function monsterAttack(battleMonster){
-        var attackDamage = Math.ceil(Math.random(battleMonster.baseAttack) * (battleMonster.baseAttack + 10))
+        var attackDamage = Math.ceil(Math.random() * 10) + battleMonster.baseAttack
         console.log("\n     [SHADE] " + battleMonster.name + " hit you for " + attackDamage + " damage!")
         player.health -= attackDamage
     if(player.health <=0){
@@ -381,46 +431,107 @@ player.name = ask.question("     [HADES] Who are you to enter my domain? ")
 console.log("\n     [HADES] Well hello " + player.name + ", welcome to the Underwold.")
 sleep.msleep(500)
 lovedOne.name = ask.question("\n     [HADES] Who are you here for? ")
-// sleep.msleep(500)
-// console.log("\n     [HADES] If you want " + lovedOne.name + " back, your task is simple. ")
-// sleep.msleep(1000)
-// console.log("\n     [HADES] Your task is to leave this place, and never turn back.")
-// sleep.msleep(1000)
-// console.log("\n     [HADES] " + lovedOne.name + " will follow you out")
-// sleep.msleep(1000)
-// console.log("\n     [HADES] If you fail in your task, or turn around, " + lovedOne.name +" will be mine forever.")
-// sleep.msleep(1000)
-// console.log("\n     [HADES] A shade will guide you on your journey. NOW GO!!")
-// sleep.msleep(1000)
+sleep.msleep(500)
+console.log("\n     [HADES] If you want " + lovedOne.name + " back, your task is simple. ")
+sleep.msleep(1000)
+console.log("\n     [HADES] Your task is to leave this place, and never turn back.")
+sleep.msleep(1000)
+console.log("\n     [HADES] " + lovedOne.name + " will follow you out")
+sleep.msleep(1000)
+console.log("\n     [HADES] If you fail in your task, or turn around, " + lovedOne.name +" will be mine forever.")
+sleep.msleep(1000)
+console.log("\n     [HADES] A shade will guide you on your journey. NOW GO!!")
+sleep.msleep(1000)
 
 while(gameOver !== true){
     if(player.health <= 0){
         gameOver = true
-    }
-    var options = ["Walk", "Drink Potion", "Inventory", "Stats", "Turn Around"] // list of options for the player
-    var choice = ask.keyInSelect(options, "     [SHADE] What would you like to do? ")
-    var run = false
-    if(choice === 0){
-        walk()
-    }else if(choice === 4){
-        turnAround()
-    }else if(choice === 1){
-        drinkPotion()
-    }else if(choice === 2){
-        inventory()
-    } else if(choice === 3){
-        stats()
-    }else if(choice === -1){
-        if(ask.keyInYN("\n     [SHADE] Abandon " + lovedOne.name + " forever?")){
-            turnAround()
+    }else if(player.health >0){
+        if(hasGrenade!== true){
+            var options = ["Walk", "Drink Potion", "Inventory", "Stats", "Turn Around"] // list of options for the player
+            var choice = ask.keyInSelect(options, "     [SHADE] What would you like to do? ")
+            var run = false
+            if(choice === 0){
+                walk()
+            }else if(choice === 4){
+                turnAround()
+            }else if(choice === 1){
+                drinkPotion()
+            }else if(choice === 2){
+                inventory()
+            } else if(choice === 3){
+                stats()
+            }else if(choice === -1){
+                if(ask.keyInYN("\n     [SHADE] Abandon " + lovedOne.name + " forever?")){
+                    turnAround()
+                }
+            }
+            if(hasGrenade === true){
+                if(ask.keyInYN("\n     [SHADE] are you ready to leave the Underworld?"))
+                sleep.msleep(1000)
+                bossFight()
+            }
+        }else if(hasGrenade === true){
+            var options = ["Walk", "Drink Potion", "Inventory", "Stats", "Turn Around", "Leave the Underworld"] // list of options for the player
+            var choice = ask.keyInSelect(options, "     [SHADE] What would you like to do? ")
+            var run = false
+            if(choice === 0){
+                walk()
+            }else if(choice === 4){
+                turnAround()
+            }else if(choice === 1){
+                drinkPotion()
+            }else if(choice === 2){
+                inventory()
+            } else if(choice === 3){
+                stats()
+            }else if(choice === -1){
+                if(ask.keyInYN("\n     [SHADE] Abandon " + lovedOne.name + " forever?")){
+                    turnAround()
+                }
+            }else if(choice === 5){
+                if(ask.keyInYN("\n     [SHADE] are you ready to leave the Underworld?"))
+                sleep.msleep(1000)
+                bossFight()
+            }
+
         }
     }
-    if(hasGrenade === true){
-        if(ask.keyInYN("\n     [SHADE] are you ready to leave the Underworld?"))
-        sleep.msleep(1000)
-        bossFight()
-    }
+}
 
-
-
+//////////////
+///CREDITS///
+////////////
+function credits(){
+    console.log(" \n     CREDITS        CREDITS       CREDITS")
+    sleep.msleep(1000)
+    console.log(" \n     Lorem ipsum dolor amet shoreditch craft beer hexagon man braid meh etsy artisan.")
+    sleep.msleep(1000)
+    console.log(" \n     Austin actually unicorn celiac neutra woke keffiyeh mixtape ramps crucifix.")
+    sleep.msleep(1000)
+    console.log(" \n     Mixtape green juice mlkshk, godard pug narwhal readymade adaptogen portland bitters.")
+    sleep.msleep(1000)
+    console.log(" \n     Narwhal food truck cliche literally paleo meditation letterpress unicorn.")
+    sleep.msleep(1000)
+    console.log(" \n     Gluten-free hammock kombucha artisan dreamcatcher cardigan you probably haven't heard of them.")
+    sleep.msleep(1000)
+    console.log(" \n     Vape flannel hell of vinyl, semiotics adaptogen artisan direct trade.")
+    sleep.msleep(1000)
+    console.log(" \n     Fam pour-over semiotics, mlkshk yr thundercats tousled irony swag chicharrones slow-carb cardigan.")
+    sleep.msleep(1000)
+    console.log(" \n     Heirloom kombucha 90's hashtag jianbing, before they sold out whatever marfa viral cliche.")
+    sleep.msleep(1000)
+    console.log(" \n     Whatever keytar 8-bit kitsch craft beer. Cliche poke street art lomo put a bird on it vape lo-fi ethical post-ironic.")
+    sleep.msleep(1000)
+    console.log(" \n     Gastropub vaporware tote bag single-origin coffee next level pitchfork farm-to-table kale chips.")
+    sleep.msleep(1000)
+    console.log(" \n     Whatever keytar 8-bit kitsch craft beer. Cliche poke street art lomo put a bird on it vape lo-fi ethical post-ironic.")
+    sleep.msleep(1000)
+    console.log(" \n     Gastropub vaporware tote bag single-origin coffee next level pitchfork farm-to-table kale chips.")
+    sleep.msleep(1000)
+    console.log(" \n     Af fixie chambray jianbing, beard artisan pinterest twee hammock 90's blue bottle wolf freegan thundercats occupy.")
+    sleep.msleep(1000)
+    console.log(" \n     Next level four dollar toast health goth narwhal, ennui umami humblebrag mlkshk hot chicken.")
+    sleep.msleep(1000)
+    gameOver=true
 }
