@@ -1,0 +1,195 @@
+
+@font-face{
+    font-family: shitFont;
+    src: url(verdemoderna.woff)
+}
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#container {
+    display: grid;
+    grid-template-columns: 1fr;
+    background: #1f4744;
+}
+
+header {
+    /* font-size: 20px; */
+    display: inline-block;
+    text-align: center;
+    height: 200px;
+    margin-top: 5pt;
+}
+div > header{
+    background: url("icon.svg"), url('gridlines.png'), url('contours@2x.png'), url('huntington.jpg');
+    width: 100%;
+    height: 15em;
+    background-repeat: no-repeat,repeat,no-repeat,no-repeat;
+    background-size: 11%,contain,cover,cover;
+    background-position: top,center,center,center;
+    background-position-y: 14pt ,-9pt ,-5pt ,0pt;
+}
+
+
+
+.title{
+    color: aliceblue;
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 2em;
+    margin-top:20%;
+}
+.sub-header{
+    padding: 5pt;
+    font-style: italic;
+    font-size: 1.2em;
+    color: #AAC0BB;
+}
+.nav-bar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-family: 'Julius Sans One', sans-serif;
+    color: rgba(250,250,250,0.7);
+    background: rgba(247,247,247,0.2);
+    height: 1em;
+    margin-top: 10pt;
+    padding: 25pt;
+}
+.view{
+    margin-left: 40pt;
+    margin-top: -5pt;
+    padding-right: 50pt;
+    padding-left: 39pt;
+    width: 100%;
+}
+.view:hover{
+    transition: background 150ms ease-out;
+    background: rgba(247,247,247,0.3);
+    position: relative;
+    padding-top: 20pt;
+    height: 50pt;
+    bottom: 20pt;
+}
+.arrow{
+    font-size: 6em;
+    margin-top: -37pt;
+    padding-left: 13pt;
+    background-size: 100%;
+}
+.arrow:hover{
+    transition: background 150ms linear 1ms;
+        background: rgba(247,247,247,0.3);
+        position: relative;
+        margin-top: -25pt;
+        padding-bottom: -100pt;
+        height: 50pt;
+        line-height: 55pt;
+}
+
+span{
+    text-decoration: underline dotted;
+}
+.linky{
+    color: darkcyan;
+    text-decoration: none;
+}
+
+.linky:hover{
+    text-decoration: underline;
+}
+
+section{
+    font-family: 'Libre Baskerville', serif;
+    font-size: .83em;
+    color: #325151;
+    margin-top: 20pt;
+    margin-left: 30pt;
+    margin-right: 30pt;
+    line-height: 2;
+}
+article{
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: .8em;
+    margin-top: 30pt;
+    margin-left: 30pt;
+}
+
+#midBody{
+    background:url('gridlines-opaque.png'), url('contours-opaque.png'), url('bamboo.png'); 
+    background-repeat: repeat, repeat,no-repeat;
+    background-size: contain,contain,cover;
+    background-position: center,center,center;
+    background-attachment: scroll,scroll,fixed;
+    background-color: rgba(190,215,201, 0.9);
+    width: 100%;
+}
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+.bottom-header{
+    /* display: flex; */
+    flex-direction: column;
+    background: url('gridlines.png'), url('contours-opaque.png'), url('koi.jpg');
+    width: 100%;
+    height: 7em;
+    background-repeat: repeat,repeat,no-repeat;
+    background-size: contain,contain,cover;
+    background-position: center,center,center; 
+    background-attachment: fixed,fixed,scroll;
+    text-align: center;
+    font-size: 1.8em;
+    padding: 25pt;
+    font-style: italic;
+    color: rgba(146, 164, 158, 1)
+}
+.highlight{
+    text-decoration: none;
+    color: rgba(203, 213, 213, 1)
+}
+.highlight:hover{
+    text-decoration: underline;
+}
+
+.weird-fonts{
+    color: rgba(203, 213, 213, .5);
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 2.5em;
+    font-family: 'shitFont';
+    height: 83pt;
+    padding-top: 25pt;
+}
+
+footer {
+    height: 100pt;
+    background-color: violet;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+@media only screen and (min-width: 700px){
+    #container {
+        grid-template-columns: 3fr 1fr;
+    }
+
+    main {
+        grid-column: 1 / 2;
+    }
+
+    footer {
+        grid-column: 2 / 3;
+        grid-row: 1 / span 3;
+        height: 100%;
+    }
+}

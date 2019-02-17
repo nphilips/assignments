@@ -24,7 +24,7 @@ var player = {
         {
             weapon: 0
         }],
-    baseAttack: 1
+    baseAttack: 5
 }
 
 var boss = {
@@ -66,17 +66,17 @@ var monster = [
     },
     {
         name: "Minotaur",
-        health: 25
+        health: 25,
         baseAttack: 0
     },
     {
         name: "Minotaur",
-        health: 25
+        health: 25,
         baseAttack: 0
     },
     {
         name: "Minotaur",
-        health: 25
+        health: 25,
         baseAttack: 0
     },
     {
@@ -201,6 +201,8 @@ function walk(){
 function monsterSummon(summonedMonster){
     var summonChance = Math.floor(Math.random() * monster.length)
     var summonedMonster = monster[summonChance]
+
+    //summonChance >= 0 && summonChance <=8
     if(summonChance === 0||summonChance === 1||summonChance === 2||summonChance === 3||summonChance === 4||summonChance === 5||summonChance === 6||summonChance === 7||summonChance === 8){
         summonedMonster.health = 25
     }else if(summonChance === 9||summonChance === 10||summonChance === 11||summonChance === 12||summonChance === 13){
@@ -222,7 +224,7 @@ function monsterSummon(summonedMonster){
 ///////////
 function monsterBattle(battleMonster, summonedMonster){
     battleMonster.health += player.inventory[1].weapon*10
-    console.log(battleMonster.name + "health: " + battleMonster.health)
+    console.log(battleMonster.name + " Health: " + battleMonster.health)
     while(battleMonster.health > 0 && player.health > 0 && run === false){
         var attackOptions = ["Run!", "Fight!", "Drink Potion","Stats", "Turn around"]
         var battleChoice = ask.keyInSelect(attackOptions, "     [SHADE] What should we do? ")
@@ -259,7 +261,7 @@ function bossFight(){
     console.log("\n     [BOSS SHADE] TIME TO DIE!! \n")
 
 
-    console.log(boss.name + "Health: " + boss.health)
+    console.log(boss.name + " Health: " + boss.health)
     while(boss.health > 0 && player.health > 0){
         var attackOptions = ["Fight!", "Drink Potion", "Stats", "Turn around"]
         var battleChoice = ask.keyInSelect(attackOptions, "     [" + lovedOne.name + "]   What will you do? ")
@@ -292,6 +294,7 @@ function randomEvent(){
         player.health-=5
     }
 }
+
 //////////////////
 ///TURN AROUND///
 ////////////////
@@ -316,7 +319,7 @@ function runAway(){
 ///ATTACK ON BOSS///
 ///////////////////
 function attackOnBoss(boss){
-    var attackDamage = Math.ceil(Math.random() * 9) + player.baseAttack
+    var attackDamage = Math.ceil(Math.random() * 10) + player.baseAttack
     boss.health -= attackDamage
     console.log("\n     [" + lovedOne.name + "]   You hit the " + boss.name + " for " + attackDamage + " points")
     if(boss.health <= 0){
@@ -355,7 +358,7 @@ function bossAttack(){
 ///ATTACK///
 ///////////
 function attack(battleMonster){
-    var attackDamage = Math.ceil(Math.random() * 9) + player.baseAttack
+    var attackDamage = Math.ceil(Math.random() * 10) + player.baseAttack
     var itemChance = Math.floor(Math.random() * items.length)
     battleMonster.health -= attackDamage
     console.log("\n     [SHADE] You hit the " + battleMonster.name + " for " + attackDamage + " points")
@@ -423,6 +426,9 @@ function drinkPotion(){
         console.log("\n     You don't have any potions")
     }
 }
+
+
+
 
 //////////////////////////////////////////////////
 // GAME START////////////////////////////////////
