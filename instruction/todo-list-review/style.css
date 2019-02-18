@@ -1,0 +1,21 @@
+.todo-container {
+    border: 1px solid black;
+    margin: 5px;
+    padding: 5px;
+}
+
+.todo-container h1 {
+    font-family: sans-serif;
+    font-weight: lighter;
+}
+
+.todo-container input {
+    zoom: 2;
+}
+
+.todo-container button {
+    background-color: firebrick;
+    color: white;
+    border-radius: 5px;
+    padding: 4px;
+}

@@ -1,0 +1,59 @@
+/* Specifying Row Height */
+/* Media queries */
+
+
+*{
+    margin: 0;
+
+}
+#zen-grid-container section:nth-child(1){
+    background-color:geen;
+}
+#zen-grid-container section:nth-child(2){
+    background-color:blue;
+}
+#zen-grid-container section:nth-child(3){
+    background-color:purple;
+}
+#zen-grid-container section:nth-child(4){
+    background-color: teal;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* #grid-container{
+    display:grid;
+    grid-template-columns: 1fr
+
+}
+
+#grid-container div{
+
+    width: 100%;
+    border:1px solid black;
+    background-color: cornflowerblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px, 5px;
+    grid-column: 1/3
+}
+
+#grid-container div h3,
+#grid-container div p{
+    font-family: sans-serif;
+    font-weight: lighter;
+}
+#grid-container div h3{
+    font-size: 12px
+} */

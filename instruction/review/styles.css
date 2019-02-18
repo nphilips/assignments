@@ -1,0 +1,26 @@
+*{
+    background-color: antiquewhite;
+    
+}
+.title{
+    text-align: center;
+}
+.inputs{
+    display: inline-block;
+    justify-content: space-around;
+    /* grid-column: 2/3;
+    grid-row: 2/1; */
+}
+.todo-container{
+    border: 1px solid black;
+    margin: 5px;
+    padding: 5px;
+}
+.todo-container{
+    font-family:sans-serif;
+    font-weight: lighter;
+}
+
+.todo-container input{
+    zoom: 2;
+}
