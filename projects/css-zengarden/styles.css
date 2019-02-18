@@ -12,6 +12,7 @@
     display: grid;
     grid-template-columns: 1fr;
     background: #1f4744;
+    /* width: 100%; */
 }
 
 header {
@@ -36,7 +37,7 @@ div > header{
 .title{
     color: aliceblue;
     font-family: 'Julius Sans One', sans-serif;
-    font-size: 2em;
+    font-size: 1.7em;
     margin-top:20%;
 }
 .sub-header{
@@ -104,15 +105,15 @@ section{
     font-size: .83em;
     color: #325151;
     margin-top: 20pt;
-    margin-left: 30pt;
-    margin-right: 30pt;
+    margin-left: 18pt;
     line-height: 2;
+    width: 65%;
 }
 article{
     font-family: 'Julius Sans One', sans-serif;
     font-size: .8em;
     margin-top: 30pt;
-    margin-left: 30pt;
+    margin-left: 18pt;
 }
 
 #midBody{
@@ -136,14 +137,15 @@ main {
     /* display: flex; */
     flex-direction: column;
     background: url('gridlines.png'), url('contours-opaque.png'), url('koi.jpg');
-    width: 100%;
-    height: 7em;
+    width: 85%;
+    height: 9em;
     background-repeat: repeat,repeat,no-repeat;
     background-size: contain,contain,cover;
     background-position: center,center,center; 
     background-attachment: fixed,fixed,scroll;
     text-align: center;
     font-size: 1.8em;
+    line-height: 1.5em;
     padding: 25pt;
     font-style: italic;
     color: rgba(146, 164, 158, 1)
@@ -160,18 +162,21 @@ main {
     color: rgba(203, 213, 213, .5);
     display: flex;
     justify-content: space-evenly;
-    font-size: 2.5em;
+    font-size: 2em;
     font-family: 'shitFont';
-    height: 83pt;
+    height: 85pt;
     padding-top: 25pt;
+    width: 80%
 }
+
 
 footer {
     height: 100pt;
-    background-color: violet;
+    background-color: white;
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 
