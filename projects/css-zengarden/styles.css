@@ -5,18 +5,15 @@
 }
 * {
     margin: 0;
-    box-sizing: border-box;
 }
 
 #container {
     display: grid;
     grid-template-columns: 1fr;
     background: #1f4744;
-    /* width: 100%; */
 }
 
 header {
-    /* font-size: 20px; */
     display: inline-block;
     text-align: center;
     height: 200px;
@@ -27,7 +24,6 @@ div > header{
     width: 90%;
     height: 15em;
     background-repeat: no-repeat,repeat,no-repeat,no-repeat;
-    /* background-attachment: scroll, fixed, scroll, scroll; */
     background-size: 11%,contain,cover,cover;
     background-position: top,center,center,center;
     background-position-y: 14pt ,-9pt ,-5pt ,0pt;
@@ -134,7 +130,7 @@ main {
     /* display: flex; */
     flex-direction: column;
     background: url('gridlines.png'), url('contours-opaque.png'), url('koi.jpg');
-    width: 85%;
+    width: 70%;
     height: 9em;
     background-repeat: repeat,repeat,no-repeat;
     background-size: contain,contain,cover;
@@ -184,11 +180,11 @@ footer {
     #container {
         grid-template-columns: 3fr 1fr;
     }
-
+    
     main {
         grid-column: 1 / 2;
     }
-
+    
     footer {
         grid-column: 2 / 3;
         grid-row: 1 / span 3;
