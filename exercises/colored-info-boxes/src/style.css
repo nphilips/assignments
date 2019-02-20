@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    /* background-color: antiquewhite; */
+    text-align: center;
+    display:grid;
+    grid-template-columns: auto auto;
+    
+}
+.color1{
+    background-color: red;
+    border: 5px solid black;
+}
+.color2{
+    background-color: pink;
+    border: 5px dotted limegreen;
+}
+.color3{
+    background-color: blue;
+    border: 5px double red;
+}
+.color4{
+    background-color: green;
+    border: 5px ridge purple;
+}
+.color5{
+    background-color: orange;
+    border: 5px dashed antiquewhite;
+}
+.color6{
+    background-color: purple;
+    border: 5px groove darkkhaki;
+}
+.color7{
+    background-color: turquoise;
+    border: 5px thick gainsboro;
+}
+.color8{
+    background-color: gold;
+    border: 5px thin salmon;
+}
+.color9{
+    background-color: saddlebrown;
+    border: 5px solid black;
+}
+.color10{
+    background-color: dodgerblue;
+    border: 5px dotted orange;
+}
