@@ -27,6 +27,14 @@ header{
     flex-direction: row;
     justify-content: space-evenly;
 }
+/* .mainContent{
+    background-image: url('./images/nature.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgba(47, 79, 79, 0.7);
+} */
 .splitPic{
     display: flex;
     flex-direction: row;
@@ -36,15 +44,16 @@ header{
 .picOne{
     background: url("./images/coffee-colidescope.jpg");
     background-size: cover;
-    background-position-y: -60px;
+    background-position: center;
     background-repeat: no-repeat;
     width: 100%;
     height: auto;
 }
 .picTwo{
-    background: url("./images/beer-on-tray.jpg");
+    background: url("./images/beer-on-tap.jpg");
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
     width: 100%;
     height: auto;
 }
@@ -52,17 +61,22 @@ header{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    /* line-height: 25px; */
 }
 .menuTitle{
     font-style:italic;
 }
 article{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-left: 25px;
+    
 }
 section{
     color: white;
+    padding-left: 25px;
+    padding-right: 25px;
 }
 p{
     line-height: 25px;
+    padding-left: 25px;
+    padding-right: 25px;
 }
