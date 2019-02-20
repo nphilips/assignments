@@ -4,10 +4,10 @@ import React from 'react'
 function Nav(){
     return(
         <div className='nav'>
-            <a>Home</a>
-            <a href='/About.js'>About</a>
-            <a>Products</a>
-            <a>Contact</a>
+            <p>Home</p>
+            <p>About</p>
+            <p>Products</p>
+            <p>Contact</p>
         </div>
     )
 }

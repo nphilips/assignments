@@ -6,15 +6,16 @@ import Footer from './Footer.js'
 import Products from './Products.js'
 import Contact from './Contact.js'
 
+
 function App(){
     return(
         <div>
             <Header />
             <Nav />
+            <About />
             <Products />
-            {/* <About /> */}
-            <Contact />
             <Footer />
+            <Contact />
         </div>
     )
 }
