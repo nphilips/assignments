@@ -6,7 +6,7 @@ import Friend from './Friend.js'
 //color
 const Person = (props) => {
 
-    const mappedFriends = props.friends.map((friend, i) => <Friend name={friend}/>)
+    const mappedFriends = props.friends.map((friend, i) => <Friend name={friend} key={i}/>)
 
 
     console.log(props);
