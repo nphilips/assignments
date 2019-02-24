@@ -1,0 +1,66 @@
+{
+    "superHeroes":[
+        {
+            "name": "Awesome Man",
+            "imgUrl": "https://oregoneconomicanalysis.files.wordpress.com/2018/09/giphy4.gif?w=500",
+            "line1": "If I could be a Superhero,", 
+            "line2": "I would be Awesome Man. ",
+            "line3": "I'd fly around the world fighting crime, ",
+            "line4": "According to my Awesome Plan.",
+            "line5": "And if I saw criminals trying to lie ",
+            "line6": "Hurting other people and making them cry, ",
+            "line7": "I'd haul them off to jail in my Awesome Van. ",
+            "line8": "Because I would be Awesome Man."
+            
+        },
+        {
+            "name": "Drug-Free Boy",
+            "imgUrl": "http://gfarma.news/wp-content/uploads/2018/04/cheech-chong-1280x720.jpg",
+            "line1": "If I could be a Superhero,", 
+            "line2": "I would be Drug-Free Boy.",
+            "line3": "Telling the world of the evils of drugs,",
+            "line4": "and the lives that they destroy.",
+            "line5": "And all of the junkies getting so high",
+            "line6": "With their needles and bongs and sticks made of thai",
+            "line7": "I'd burn them alive and I would squeal with joy.",
+            "line8": "Cause I would be Drug-Free Boy."
+
+        },
+        {
+            "name": "Immigration Dude",
+            "imgUrl": "https://media.giphy.com/media/z619OZp86JaBG/giphy.gif",
+            "line1": "If I could be a Superhero,", 
+            "line2": "I'd be Immigration Dude",
+            "line3": "I'd send all the foreigners back to their homes",
+            "line4": "For eating up all of our food",
+            "line5": "For taking our welfare and best jobs to boot",
+            "line6": "Like landscaping, dishwashing, picking our fruit",
+            "line7": "I'd pass lots of laws to get rid of their brood",
+            "line8": "Because I would be Immigration Dude."
+        },
+        {
+            "name": "Justice Guy",
+            "imgUrl": "https://i.imgur.com/5y9xDXu.png",
+            "line1": "If you could be a Superhero,", 
+            "line2": "Would you be Justice Guy?",
+            "line3": "Making sure people get what they deserve,",
+            "line4": "Especially women who lie",
+            "line5": "Like if a wife left her husband with three kids and no job",
+            "line6": "To run off to f---ing Hawaii with some doctor named Bob",
+            "line7": "You could skin them and drain them of blood til they die",
+            "line8": "Then you would be Justice Guy"
+        },
+        {
+            "name": "Stephen Lynch",
+            "imgUrl": "https://i.scdn.co/image/93624d89c42888fbcc0488b217da6fa801b37e5a",
+            "line1": "Or you could be subtle, I didn't mean to be vague", 
+            "line2": "Give her Mad Cow disease & let him die of the plague",
+            "line3": "As long as they suffer for their terrible lie",
+            "line4": "Especially Bob",
+            "line5": "Then you would be Justice Guy.",
+            "line6": "Then you would be a Superhero, like me.",
+            "line7": "Thank you!",
+            "line8": "Song: 'Super Hero' by: Stephen Lynch"
+        }
+    ]
+}

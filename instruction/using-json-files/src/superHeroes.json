@@ -1,0 +1,14 @@
+{
+    "superHeroes":[
+        {
+            "name": "Nicholas Cage",
+            "ImgUrl": "https://dz7u9q3vpd4eo.cloudfront.net/wp-content/legacy/posts/58a80e0d-7263-447a-b75a-f734a76816a4.jpg",
+            "catchPhrase": "We must protect the Declaration of Independence!"
+        },
+        {
+            "name": "Nicholas Cage",
+            "ImgUrl": "https://gazettereview.com/wp-content/uploads/2016/12/keanu-reeves.jpg",
+            "catchPhrase": "Woah."
+        }
+    ]
+}
