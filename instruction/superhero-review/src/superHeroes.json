@@ -1,0 +1,19 @@
+{
+    "superHeroes": [
+        {
+            "name": "Nicholas Cage",
+            "imgUrl": "",
+            "catchPhrase": "Protect the something"
+        },
+        {
+            "name": "John Wick",
+            "imgUrl": "",
+            "catchPhrase": "Protect the something"
+        },
+        {
+            "name": "Steve Irwin",
+            "imgUrl": "",
+            "catchPhrase": "Protect the something"
+        },
+    ]
+}
