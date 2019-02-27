@@ -1,0 +1,7 @@
+.name-badge-list div:nth-child(evens){
+    background-color: blue;
+}
+
+.name-badge-list div:nth-child(odd){
+    background-color: green;
+}
