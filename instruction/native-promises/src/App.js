@@ -1,11 +1,28 @@
-import React from 'react'
+// Promises:
+    // Resolve
+    // Reject
 
-const App = () => {
-    return(
-        <div>
-            Hello world
-        </div>
-    )
+function flipCoin(){
+    const num = Math.floor(Math.random() *2)
+    if(num === 0){
+        return "Heads"
+    }else {
+        return "Tails"
+    }
 }
 
-export default App
+function testFlipCoin(){
+    return new Promise((resolve, reject) => {
+        const side = flipCoin()
+        if(side === "Heads"){
+            resolve("It was Heads!")
+        } else if(side === "Tails"){
+            reject("It was Tails!")
+        }
+    })
+}
+
+testFlipCoin()
+        .then(response => console.log("Response " + response))
+        .catch(error => console.log("Error " + error))
+
