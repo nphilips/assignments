@@ -1,0 +1,27 @@
+.home-light{
+    background-color: yellow;
+}
+
+.nav-light{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: cornflowerblue;
+}
+/* .home-light p{
+    background-color: cornflowerblue;
+} */
+
+.home-dark{
+    background-color: #3339
+}
+
+.nav-dark{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: #ddd9;  
+}
+/* .home-dark p{
+    background-color: #ddd9
+} */
