@@ -1,0 +1,67 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    font-weight: lighter;
+}
+
+.app-container > form {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    border: 1px solid black;
+    margin: 5px;
+}
+
+.app-container > h1 {
+    text-align: center;
+}
+
+.app-container > h6 {
+    text-align: center;
+}
+
+.app-container > form > input {
+    margin: 10px 0;
+}
+
+.app-container > form > button {
+    padding: 4px 0;
+    border-radius: 3px;
+}
+
+.beer-div {
+    color: black;
+    border-radius: 3px;
+    border: 1px solid black;
+    margin: 5px; 
+    margin-top: 5px;
+    /* background-size: cover;  */
+    height: 50vh;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: space-evenly;
+    font-size: 15px;
+}
+
+.beer-div button {
+    padding: 5px;
+    border-radius: 3px;
+}
+
+.beer-div button:nth-child(4) {
+    background-color: firebrick;
+}
+
+.beer-div button:nth-child(5) {
+    background-color: dodgerblue;
+}
+
+.beer-pic-and-description{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}

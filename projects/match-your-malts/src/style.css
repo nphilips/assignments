@@ -25,25 +25,21 @@ html {
 }
 
 .home {
-    background-color: cornflowerblue;
+    background-color: lightblue;
 }
 
 .favDrinks {
-    background-color: firebrick;
+    background-color: darkred;
 }
 
 .contact {
-    background-color: darkorchid;
+    background-color: purple;
 }
 
 .drinkFinder {
-    background-color: coral;
+    background-color: lightsalmon;
 }
-
-
-
-
-
+///////////////////////////////////////
 .app-container {
 
 }
@@ -51,21 +47,6 @@ html {
 .app-container > button {
     
 }
-
-
-
-/* .nav {
-    display: flex;
-    flex-direction: column;
-    width: 100px;
-    background-color: #1119;
-    height: 100vh;
-    align-items: center;
-    position: absolute;
-    left: 0;
-    transition: left 300ms linear ;
-    z-index: 2;
-} */
 
 .nav {
     display: flex;
@@ -106,7 +87,6 @@ html {
     background-color: #5559;
 }
 
-
 .overlay {
     width: 100vw;
     height: 100vh;
@@ -127,29 +107,26 @@ html {
 
 .rotate {
     position: absolute;
+    background-color: transparent;
+    border: none;
     right: 0;
     padding: 10px;
     margin: 10px;
-    border: 1px solid black;
-    border-radius: 4px;
+    /* border: 1px solid black; */
+    /* border-radius: 4px; */
     z-index: 1; /* the button is directly behind the overlay */
     transform: rotate(90deg);
     transition: transform 200ms linear, opacity 300ms linear;
 }
 
 .rotate-open {
-    transform: rotate(90deg);
+    transform: rotate(-90deg);
 }
 
 .rotate-closed {
     transform: rotate(0deg);
 }
-
-
-
-
-
-
+/* ///////////////////////////////////////// */
 /* Page Fade Transition */
 .page-fade-appear {
     opacity: 0;
@@ -180,3 +157,13 @@ html {
     opacity: 0;
     transition: opacity 600ms linear;
 }
+
+.beerIcon{
+    background-image: url('./media/beer-icon.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 50px;
+    height: 50px;
+}
+/* ///////////////////////////////////////////////// */
