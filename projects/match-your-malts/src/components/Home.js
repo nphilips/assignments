@@ -28,7 +28,7 @@ class Home extends Component {
     }
     handleABVSubmit = e => {
         e.preventDefault()
-        this.props.getBeersByABV(this.state.nameInput)
+        this.props.getBeersByABV(this.state.abvInput)
         this.setState({
             nameInput: "",
             abvInput: '',
@@ -41,21 +41,21 @@ class Home extends Component {
             <div className="app-container">
                 <h1>Match Your Malts</h1>
                 <h6>(Beer list)</h6>
-                {/* <div className="beer-form"> */}
-                    <form onSubmit={this.handleNameSubmit} style={{marginTop:55}}>
-                        <input type="text" name="nameInput" value={this.state.nameInput} onChange={this.handleChange} placeholder='By Name:'/>
-                        
-                        <button>Submit</button>
-                    </form>
 
-                    <h1>OR</h1>
+                <form className='beer-form' onSubmit={this.handleNameSubmit} style={{marginTop:55}}>
+                    <input type="text" name="nameInput" value={this.state.nameInput} onChange={this.handleChange} placeholder='By Name:'/>
+                    
+                    <button>Submit</button>
+                </form>
 
-                    <form onSubmit={this.handleABVSubmit}>
-                        <input type="number" name="abvInput" value={this.state.abvInput} onChange={this.handleChange} placeholder='By Abv:'/>
+                <h1 className='beer-form'>OR</h1>
 
-                        <button>Submit</button>
-                    </form>
-                {/* </div> */}
+                <form className='beer-form' onSubmit={this.handleABVSubmit}>
+                    <input type="number" name="abvInput" value={this.state.abvInput} onChange={this.handleChange} placeholder='By Abv:'/>
+
+                    <button>Submit</button>
+                </form>
+
                 <div className="listed-beers">
                     { this.props.beers.map(beer => 
                         <div className="beer-div">
