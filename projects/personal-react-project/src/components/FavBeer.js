@@ -1,14 +1,13 @@
 import React, { Component } from 'react'
 // import AddBeerForm from './AddBeerForm.js'
 
-class Beer extends Component {
+class FavBeer extends Component {
     constructor(props){
         super(props)
         this.state = {
             tagline: props.tagline,
             description: props.description,
             image_url: props.image_url,
-            food_pairing: props.food_pairing,
             abv: props.abv,
         }
     }
@@ -50,11 +49,11 @@ class Beer extends Component {
                             backgroundPosition: 'center', 
                             backgroundSize: 'contain', 
                             height: 200, 
-                            width: 600, 
+                            width: 300, 
                             backgroundRepeat: 'no-repeat', 
                             }}>
                         </div>
-                        <h3 className='description'>{description}</h3>
+                        <h3>{description}</h3>
                     </div>
                         <p>ABV: {abv}%</p>
                     <button onClick={() => handleDelete(_id)}>Delete</button>
@@ -66,4 +65,4 @@ class Beer extends Component {
 }
 
 
-export default Beer
+export default FavBeer

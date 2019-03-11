@@ -5,37 +5,37 @@ import { withBeers } from './context/BeerProvider.js'
 
 
 class App extends Component {
-    constructor(){
-        super()
-        this.state = {
-            tagline: '',
-            description: '',
-            image_url: '',
-            abv: '',
-        }
-    }
+    // constructor(){
+    //     super()
+        // this.state = {
+        //     tagline: '',
+        //     description: '',
+        //     image_url: '',
+        //     abv: '',
+        // }
+    // }
 
-    componentDidMount(){
-        // Call getTodos from context on page load
-       this.props.getBeers()
-    }
+    // componentDidMount(){
+    //     // Call getTodos from context on page load
+    //    this.props.getBeers()
+    // }
 
-    handleChange = e => {
-        const { name, value } = e.target
-        this.setState({ [name]: value })
-    }
+    // handleChange = e => {
+    //     const { name, value } = e.target
+    //     this.setState({ [name]: value })
+    // }
 
-    handleSubmit = e => {
-        e.preventDefault()
+    // handleSubmit = e => {
+    //     e.preventDefault()
         
-        this.props.findBeer(this.state)
+    //     this.props.findBeer(this.state)
         
-        this.setState({
-            tagline: '',
-            description: '',
-            image_url: ''
-        })
-    }
+    //     this.setState({
+    //         tagline: '',
+    //         description: '',
+    //         image_url: ''
+    //     })
+    // }
 
     render(){
         return (
@@ -51,8 +51,9 @@ class App extends Component {
                     btnText="Find Beer"/>
                 <BeerList 
                     beers={this.props.beers}
-                    handleDelete={this.props.handleDelete}
-                    handleEdit={this.props.handleEdit}/>
+                    // handleDelete={this.props.handleDelete}
+                    // handleEdit={this.props.handleEdit}
+                    />
             </div>
         )
     }

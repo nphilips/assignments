@@ -21,47 +21,46 @@ class BeerProvider extends Component {
        .catch(error => console.log(error))
     }
 
-    addBeer = (inputs) => {
-        const { tagline, description, image_url, abv } = inputs
+    // addBeer = (inputs) => {
+    //     const { tagline, description, image_url, abv } = inputs
         
-        const newBeer = { tagline, description, image_url, abv }
+    //     const newBeer = { tagline, description, image_url, abv }
 
-        axios.post(this.url, newBeer).then(response => {
-            this.setState(prevState => {
-                return {
-                    beers: [response.data, ...prevState.beers]
-                }
-            })
+    //     axios.post(this.url, newBeer).then(response => {
+    //         this.setState(prevState => {
+    //             return {
+    //                 beers: [response.data, ...prevState.beers]
+    //             }
+    //         })
             
-        }).catch(error => console.log(error))
-    }
+    //     }).catch(error => console.log(error))
+    // }
 
-    handleDelete = (_id) => {
-        
-        axios.delete(`${this.url}/${_id}`).then(response => {
-            this.setState(prevState => {
-                return {
+    // handleDelete = (_id) => {
+    //     axios.delete(`${this.url}/${_id}`).then(response => {
+    //         this.setState(prevState => {
+    //             return {
                     
-                    beers: prevState.beers.filter(beer => beer._id !== _id)
-                }
-            })    
-        }).catch(error => console.log(error))
-    }
+    //                 beers: prevState.beers.filter(beer => beer._id !== _id)
+    //             }
+    //         })    
+    //     }).catch(error => console.log(error))
+    // }
 
-    handleEdit = (_id, updates) => {
-        axios.put(`${this.url}/${_id}`, updates)
-            .then(response => {
+    // handleEdit = (_id, updates) => {
+    //     axios.put(`${this.url}/${_id}`, updates)
+    //         .then(response => {
                 
-                const updatedBeer = response.data
-                this.setState(prevState => {
-                    return {
+    //             const updatedBeer = response.data
+    //             this.setState(prevState => {
+    //                 return {
                         
-                        beers: prevState.beers.map(beer => beer._id === _id ? updatedBeer : beer)
-                    }
-                })
-            })
-            .catch(error => console.log(error))
-    }
+    //                     beers: prevState.beers.map(beer => beer._id === _id ? updatedBeer : beer)
+    //                 }
+    //             })
+    //         })
+    //         .catch(error => console.log(error))
+    // }
 
     render(){
         return (
@@ -69,9 +68,9 @@ class BeerProvider extends Component {
                 value={{
                     beers: this.state.beers,
                     getBeers: this.getBeers,
-                    addBeer: this.addBeer,
-                    handleDelete: this.handleDelete,
-                    handleEdit: this.handleEdit
+                    // addBeer: this.addBeer,
+                    // handleDelete: this.handleDelete,
+                    // handleEdit: this.handleEdit
                 }}>
                 { this.props.children }
             </BeerContext.Provider>

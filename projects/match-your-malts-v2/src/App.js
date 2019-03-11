@@ -3,9 +3,11 @@ import ErrorBoundary from './shared/ErrorBoundary.js'
 import Nav from './components/Nav.js'
 import Home from './components/Home.js'
 import FavDrinks from './components/FavDrinks.js'
+import DrinkFinder from './components/DrinkFinder.js'
 import Contact from './components/Contact.js'
 import { Switch, Route, withRouter } from 'react-router-dom'
 import { PageFade } from './transitions'
+import axios from 'axios'
 import './style.css'
 
 class App extends Component {
@@ -13,12 +15,18 @@ class App extends Component {
         super()
         this.state = {
             navToggle: false,
-            // beers: [],
-            // favBeers: []
+            beers: [],
+            favBeers: []
         }
     }
 
     toggler = () => this.setState(prevState => ({ navToggle: !prevState.navToggle }))
+
+    componentDidMount(){
+        axios.get('https://api.vschool.io/nickp/todo')
+            .then(res => this.setState({ beers: res.data }))
+            .catch(err => console.log(err))
+    }
 
     render(){
         const { navToggle } = this.state
@@ -35,6 +43,11 @@ class App extends Component {
                         <Route exact path="/" render={ props => 
                                                     <ErrorBoundary>
                                                         <Home {...props}/>
+                                                    </ErrorBoundary>
+                                                }/>
+                        <Route path="/drinkFinder" render={ props => 
+                                                    <ErrorBoundary>
+                                                        <DrinkFinder {...props}/>
                                                     </ErrorBoundary>
                                                 }/>
                         <Route path="/favDrinks" render={ props => 

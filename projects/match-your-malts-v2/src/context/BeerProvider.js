@@ -11,17 +11,8 @@ class BeerProvider extends Component {
         }
      }
 
-    getBeersByName = (nameInput) => {
-        axios.get(`https://api.punkapi.com/v2/beers?beer_name=${nameInput}`)
-            .then(res => {
-                this.setState({
-                    beers: res.data
-                })
-            })
-        .catch(err => console.log(err))
-    }
-    getBeersByABV = (abvInput) => {
-        axios.get(`https://api.punkapi.com/v2/beers?abv_gt=${abvInput}`)
+    getBeers = (beerInput) => {
+        axios.get(`https://api.punkapi.com/v2/beers?beer_name=${beerInput}`)
             .then(res => {
                 this.setState({
                     beers: res.data
@@ -34,8 +25,7 @@ class BeerProvider extends Component {
          return (
              <BeerContext.Provider
                 value={{
-                    getBeersByName: this.getBeersByName,
-                    getBeersByABV: this.getBeersByABV,
+                    getBeers: this.getBeers,
                     beers: this.state.beers
                 }}>
                 { this.props.children }
@@ -47,6 +37,7 @@ class BeerProvider extends Component {
 export default BeerProvider
 
 
+// HOC
 export const withBeers = C => props => (
     <BeerContext.Consumer>
         {value => <C {...props} {...value}/>}
