@@ -69,9 +69,9 @@ app.delete('/people/:_id', (rec, res) => {
 })  
 
 // PUT - Update one
-app.put('/person/:_id', (req, res) => {
+app.put('/people/:_id', (req, res) => {
     // Use the ID to find the object to update
-    const foundPerson = people.find(person => person.perams_id === ID)
+    const foundPerson = people.find(person => person._id === req.params._id)
     // Update that object
     Object.assign(foundPerson, req.body)
     // Send back the updated object
