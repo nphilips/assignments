@@ -18,39 +18,15 @@ const gameSchema = new Schema({
         type: Number,
         default: 0
     },
-    genre: {
+    genre: [{
         type: String,
-        enum: ["action", "action-adventure", "adventure", "role-playing", "simulation", "strategy", "sports", "mmo",],
+        enum: ['action', 'actAdv', 'adventure', 'rpg', 'simulation', 'strategy', 'sports', 'firstPersonShooter'],
         required: true
-    },
+    }],
     subGenre: {
         type: String,
-        enum: ["horror", "entertainment", "humor", "news", "sports", "culture", "science", "arts", "celebrity", "awhcute", "hobbies", "politics", "music", "architecture", "weather", "john mayer"],
-        required: true
-    },
-    comments: [{
-        user: {
-            type: Schema.Types.ObjectId,
-            ref: "User",
-            required: true
-        },
-        comment: {
-            type: String,
-            required: true
-        },
-        timeStamp: {
-            type: Date,
-            default: Date.now
-        }
-    }],
-    timeStamp: {
-        type: Date,
-        default: Date.now
-    },
-    tags: [{
-        type: String,
-        default: []
-    }]
+        enum: [ 'platform', 'shooter', 'fighting', 'stealth', 'survival', 'rhythm','survival-horror', 'metroidvania','text', 'graphic', 'visual-novel', 'interactive', 'real-time-3d','action', 'rpg', 'roguelike', 'tactical', 'sandbox', 'first-person', 'fantasy', 'construction-&-management', 'life', 'vehicle','4X', 'artillary', 'rts', 'rtt', 'moba', 'tower-defense', 'tbs', 'tbt', 'wargame', 'grand-strat-wargame', 'mmo', 'racing', 'sports', 'competitive', 'fighting']
+    }
 })
 
 module.exports = mongoose.model("Game", gameSchema)

@@ -19,8 +19,8 @@ mongoose.connect("mongodb://localhost:27017/gameguru", {useNewUrlParser: true}, 
 app.use("/auth", require("./routes/authRouter.js"))
 app.use("/public", require("./routes/publicRouter.js"))
 
-app.use("/api", expressJwt({secret: process.env.SECRET}))
-app.use("/api/posts", require("./routes/postRouter.js"))
+app.use("/gameguru", expressJwt({secret: process.env.SECRET}))
+app.use("/gameguru/games", require("./routes/gameRouter.js"))
 
 
 // Global Error Handler

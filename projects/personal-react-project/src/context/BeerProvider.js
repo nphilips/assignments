@@ -17,8 +17,8 @@ class BeerProvider extends Component {
             this.setState({
                 beers: response.data
             })
-       })
-       .catch(error => console.log(error))
+        })
+        .catch(error => console.log(error))
     }
 
     // addBeer = (inputs) => {
