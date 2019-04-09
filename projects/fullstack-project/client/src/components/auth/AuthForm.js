@@ -6,6 +6,7 @@ const AuthForm = props => {
     return(
         <form onSubmit={handleSubmit}>
             <input 
+                style={{backgroundColor: "white"}}
                 type="text" 
                 name="username" 
                 onChange={handleChange} 
@@ -13,19 +14,21 @@ const AuthForm = props => {
                 placeholder="Username" 
                 required/>
             <input 
+                style={{backgroundColor: "white"}}
                 type="password" 
                 name="password" 
                 onChange={handleChange} 
                 value={password} 
                 placeholder="Password" 
                 required/>
-            <input 
+            {/* <input 
+                style={{backgroundColor: "white"}}
                 type="text" 
                 name="payment" 
                 onChange={handleChange} 
                 value={payment} 
                 placeholder="Monies" 
-                required/>
+                required/> */}
             <button style={{backgroundColor:"red"}}>{btnText}</button>
         </form>
     )

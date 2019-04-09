@@ -3,6 +3,13 @@
 
 import React, { Component } from 'react'
 import axios from 'axios'
+const gameAxios = axios.create();
+
+gameAxios.interceptors.request.use((config)=>{
+    const token = localStorage.getItem("token");
+    config.headers.Authorization = `Bearer ${token}`;
+    return config;
+})
 
 const GameContext = React.createContext()
 
@@ -12,16 +19,16 @@ class GameProvider extends Component {
         this.state = {
             games: []
         }
-        this.url = "mongodb://localhost:27017/gameguru/games"
+        // this.url = "mongodb://localhost:27017/gameguru/games"
     }
 
     getGames = () => {
-        axios.get(this.url).then(response => {
+        gameAxios.get("/gameguru/games").then(response => {
+            console.log(response.data)
             this.setState({
                 games: response.data
             })
-        })
-        .catch(error => console.log(error))
+        }).catch(error => console.log(error))
     }
 
     

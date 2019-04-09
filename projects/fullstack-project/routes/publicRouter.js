@@ -15,7 +15,7 @@ publicRouter.get("/", async (req, res, next) => {
     }
 })
 
-// - Get games by genre - req.params.genre === "humor", "awhcute"
+// - Get games by genre - req.params.genre === "action", "survival-horror"
 publicRouter.get("/games/:genre", (req, res, next) => {
     Game.find({genre: req.params.genre}, (err, games) => {
         if(err){

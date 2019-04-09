@@ -5,3 +5,9 @@ body{
     background-color: #141414;
     color: green;
 }
+.nav-wrapper{
+    background-color: purple;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}

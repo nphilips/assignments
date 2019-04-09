@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-// import AddBeerForm from './AddBeerForm.js'
+import { withGames } from '../context/GameProvider'
 
 class Game extends Component {
     constructor(props){
@@ -13,24 +13,6 @@ class Game extends Component {
         }
     }
 
-    handleChange = e => {
-        const { title, value } = e.target
-        this.setState({ [title]: value })
-    }
-
-    handleSubmit = e => {
-        e.preventDefault()
-        const updates = {
-            title: this.state.title,
-            summary: this.state.summary,
-            imgUrl: this.state.imgUrl,
-            votes: this.state.votes,
-            genre: this.state.genre
-        }
-        this.props.handleEdit(this.props._id, updates)
-        this.toggler()
-    }
-
 
     render(){
         const { title, summary, imgUrl, genre, votes} = this.props
@@ -38,21 +20,23 @@ class Game extends Component {
         return (
             <div>
                 <div className="game-div">
-                    <h1>{title}</h1>
+                    {/* <h1>{title}</h1> */}
                     <div className='game-pic-and-summary'>
-                        <div className='game-pic' style={{
+                        <div className='game-pic' 
+                        style={{
                             backgroundImage: `url(${imgUrl})`, 
                             backgroundPosition: 'center', 
                             backgroundSize: 'contain', 
-                            height: 200, 
-                            width: 600, 
-                            backgroundRepeat: 'no-repeat', 
-                            }}>
+                            height: "35vh",
+                            width: "auto",
+                            backgroundRepeat: 'no-repeat'
+                            }}
+                            >
                         </div>
-                        <h3 className='summary'>{summary}</h3>
+                        {/* <h3 className='summary'>{summary}</h3> */}
                     </div>
-                        <p>votes: {votes}</p>
-                        <p>genre: {genre}</p>
+                        {/* <p>votes: {votes}</p>
+                        <p>genre: {genre}</p> */}
                 </div>
             </div>
         )
@@ -60,4 +44,4 @@ class Game extends Component {
 }
 
 
-export default Game
+export default withGames(Game)

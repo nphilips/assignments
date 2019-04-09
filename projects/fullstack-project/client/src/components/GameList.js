@@ -5,11 +5,9 @@ const GameList = (props) => {
     const mappedGames = props.games.map(game => 
                                 <Game 
                                     {...game} 
-                                    handleDelete={props.handleDelete} 
-                                    handleEdit={props.handleEdit}
                                     key={game._id}
                                 />)
-
+    console.log(props)
     return (
         <div>
             { mappedGames }

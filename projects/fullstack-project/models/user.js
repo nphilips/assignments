@@ -12,30 +12,7 @@ const userSchema = new Schema({
     password: {
         type: String,
         required: true
-    },
-    isAdmin: {
-        type: Boolean,
-        default: false
-    },
-    userImg: String,
-    birthday: Date,
-    firstName: String,
-    lastName: String,
-    email: String,
-    payment: {
-        type: String,
-        required: true
     }
-    // likedPosts: [{
-    //     type: Schema.Types.ObjectId,
-    //     ref: "Post",
-    //     default: []
-    // }],
-    // votedFor: [{
-    //     type: Schema.Types.ObjectId,
-    //     ref: "Post",
-    //     default: []
-    // }]
 })
 
 // User Auth methods

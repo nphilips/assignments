@@ -5,38 +5,6 @@ import { withBeers } from './context/BeerProvider.js'
 
 
 class App extends Component {
-    // constructor(){
-    //     super()
-        // this.state = {
-        //     tagline: '',
-        //     description: '',
-        //     image_url: '',
-        //     abv: '',
-        // }
-    // }
-
-    // componentDidMount(){
-    //     // Call getTodos from context on page load
-    //    this.props.getBeers()
-    // }
-
-    // handleChange = e => {
-    //     const { name, value } = e.target
-    //     this.setState({ [name]: value })
-    // }
-
-    // handleSubmit = e => {
-    //     e.preventDefault()
-        
-    //     this.props.findBeer(this.state)
-        
-    //     this.setState({
-    //         tagline: '',
-    //         description: '',
-    //         image_url: ''
-    //     })
-    // }
-
     render(){
         return (
             <div className="app-container">

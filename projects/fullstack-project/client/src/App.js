@@ -8,6 +8,8 @@ import NotFound from './components/NotFound.js'
 import "./styling/style.css"
 import './styling/user.css'
 import './styling/home.css'
+import './styling/game-card.css'
+import './styling/individual-game.css'
 
 // Auth
     // Form for login and signup
@@ -17,30 +19,27 @@ import './styling/home.css'
     // axios, react-router-dom, prop-types
 
 const App = (props) => {
-    const {user, token} = props
+    const {user, token, logout} = props
     // document.title = props.location.pathname.slice(1)[0].toUpperCase() + props.location.pathname.slice(2)
     
     return (
         <div>
-            {token && <button onClick={props.logout}>Logout</button>}
-            {!token && <button onClick={() => props.history.push("/login")}>login</button>}
+            {/* {token && <button onClick={props.logout} style={{backgroundColor: 'lightGreen', borderRadius: 10}}>Logout</button>}
+            {!token && <button onClick={() => props.history.push("/login")}>login</button>} */}
             <Switch>
-                <Route exact path="/" render={() => token ? <Redirect to="/home"/> : <Redirect to="/login"/>}/>
+                <Route exact path="/" render={() => token ? <Redirect to="/browse"/> : <Redirect to="/login"/>}/>
                 <Route 
                     path="/login" 
-                    render={rProps => token ? <Redirect to="/home"/> : <AuthContainer {...rProps}/>}/>
+                    render={rProps => token ? <Redirect to="/browse"/> : <AuthContainer {...rProps}/>}/>
                 <ProtectedRoute 
                     token={token}
-                    path="/home"
+                    path="/browse"
                     redirectTo="/login"
                     component={Home}
                     username={user.username}
                     logout={props.logout}
                 />
                 <Route path="*" component={NotFound}/>
-                {/* <Route
-                    path="/home"
-                    render={rProps => !token ? <Redirect to="/login"/> : <Home {...rProps}/>}/> */}
             </Switch>
         </div>
     )
