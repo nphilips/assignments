@@ -1,15 +1,16 @@
 import React from 'react';
-import {Switch, Route, Redirect} from "react-router-dom"
+import {Switch, Route, Redirect, withRouter} from "react-router-dom"
 import {withUser} from './context/UserProvider.js'
 import AuthContainer from './components/auth/AuthContainer.js'
 import Home from './components/Home.js'
 import ProtectedRoute from './shared/ProtectedRoute.js';
 import NotFound from './components/NotFound.js'
+import IndividualGame from './components/IndividualGame.js'
 import "./styling/style.css"
-import './styling/user.css'
-import './styling/home.css'
-import './styling/game-card.css'
-import './styling/individual-game.css'
+// import './styling/user.css'
+// import './styling/home.css'
+// import './styling/game-card.css'
+// import './styling/individual-game.css'
 
 // Auth
     // Form for login and signup
@@ -39,6 +40,7 @@ const App = (props) => {
                     username={user.username}
                     logout={props.logout}
                 />
+                <Route path='/:_id' component={IndividualGame}/>
                 <Route path="*" component={NotFound}/>
             </Switch>
         </div>
@@ -46,4 +48,4 @@ const App = (props) => {
 }
 
 
-export default withUser(App)
+export default withUser(withRouter(App))

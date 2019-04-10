@@ -6,8 +6,56 @@ body{
     color: green;
 }
 .nav-wrapper{
-    background-color: purple;
+    background-color: #141414;
     position: fixed;
     top: 0;
     width: 100%;
+}
+.game-div{
+    /* display: grid;
+    grid-column: auto; */
+    border: solid white 1px;
+    border-radius: 10px;
+    /* align-items: center; */
+    
+}
+.user-auth{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.login{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.home-container{
+    color: green;
+}
+.user-icon{
+    text-align: right;
+    font-size: 30px;    
+}
+
+@media only screen and (max-width: 600px){
+    .user-icon{
+        text-align: right;
+        font-size: 40px;    
+    }
+}
+@media only screen and (max-width: 1000px){
+    .game-div{
+        /* display: grid; */
+        /* grid-template-columns: auto auto; */
+        border: solid white 1px;
+        border-radius: 10px;
+        /* align-items: center; */
+        
+    }
+    .user-icon{
+        text-align: right;
+        font-size: 50px;    
+    }
 }

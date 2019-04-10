@@ -3,6 +3,7 @@ import GameList from './GameList.js'
 import { withGames } from '../context/GameProvider'
 // import {Carousel} from 'react-materialize'
 import Navbar from './Nav';
+import {Link} from 'react-router-dom'
 
 
 class Home extends Component {
@@ -24,7 +25,9 @@ class Home extends Component {
                     {this.props.username}
                 </div>
                 <div className="show-game">
-                    <GameList games={this.props.games}/>
+                    {/* <Link to={game._id}> */}
+                        <GameList games={this.props.games}/>
+                    {/* </Link> */}
                 </div>
             </div>
         )

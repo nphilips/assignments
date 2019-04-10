@@ -28,7 +28,7 @@ class GameProvider extends Component {
             this.setState({
                 games: response.data
             })
-        }).catch(error => console.log(error))
+        }, console.log(this.state.games)).catch(error => console.log(error))
     }
 
     
