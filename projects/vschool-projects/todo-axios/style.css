@@ -1,0 +1,38 @@
+.todo-container {
+    position: relative;
+    border: 1px solid black;
+    /* display: flex;
+    justify-content: space-around; */
+    margin: 5px 20%;
+    padding: 3px;
+    /* background: aliceblue; */
+}
+
+.todo-container h1 {
+    text-align: center;
+}
+
+body{
+    background: #FDF0D5;
+}
+#list{
+    background: green;
+    float: left;
+    padding: 10pt 20pt;
+    position: fixed;
+}
+button{
+    background: aliceblue;
+}
+
+select{
+    padding: 0;
+    margin: 0;
+    background: aliceblue;
+    float: right;
+}
+
+body > h1{
+    font-size: 15vh;
+    text-align: center;
+}
