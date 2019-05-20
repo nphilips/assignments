@@ -1,0 +1,286 @@
+@font-face {
+    font-family: font;
+    src: url(verdemoderna.woff);
+  }
+  * {
+    margin: 0;
+    box-sizing: border-box;
+  }
+  body {
+    width: 100%;
+  }
+  
+  #container {
+    display: grid;
+    grid-template-columns: 3fr;
+  }
+  .main {
+    position: fixed;
+  }
+  header {
+    width: 100%;
+    background-image: url(images/contours@2x.png),
+      url(images/gridlines-opaque.png), url(images/huntington.jpg);
+    background-repeat: repeat, repeat, no-repeat;
+    background-size: cover, cover, cover;
+    background-position: right 10px, right 10px, left 10px;
+    background-color: #1b4849;
+    height: 41vh;
+    display: grid;
+    grid-template-rows: 3fr;
+  }
+  
+  .circle {
+    background: url(images/enso.svg);
+    width: 200px;
+    height: 100px;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  
+  #title {
+    position: relative;
+    font-family: "Julius Sans One", sans-serif;
+    color: white;
+    top: 40%;
+    font-size: 200%;
+  
+    text-align: center;
+  }
+  
+  #titleItalic {
+    position: relative;
+    font-style: italic;
+    text-align: center;
+    top: 40%;
+    font-size: 150%;
+    color: white;
+    opacity: 0.7;
+    margin-bottom: 25px;
+  }
+  
+  nav {
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    font-family: "Julius Sans One", sans-serif;
+    background-color: rgba(255, 255, 255, 0.3);
+    list-style-type: none;
+    color: white;
+    font-size: 3vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  #betweenArrows {
+    font-size: 2.5vh;
+  }
+  
+  .arrows {
+    font-size: 10vh;
+  }
+  
+  main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    font-family: "Libre Baskerville", serif;
+    color: #315050;
+    line-height: 25px;
+    font-size: 13.5px;
+  }
+  section {
+    position: relative;
+  }
+  
+  main h1 {
+    margin-bottom: 1vh;
+    font-family: "Julius Sans One", sans-serif;
+  }
+  #hidden {
+    display: none;
+  }
+  .bamboo {
+    background-color: rgba(189, 214, 199, 0.6);
+    background-image: url(images/contours-opaque.png),
+      url(images/gridlines-opaque.png), url(images/bamboo.png);
+    background-attachment: scroll, scroll, fixed;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-size: auto, auto, cover;
+  }
+  
+  .footer-picture {
+    color: white;
+    background-color: rgba(189, 214, 199, 0.6);
+    background-image: url(images/contours-opaque.png),
+      url(images/gridlines-opaque.png), url(images/koi.jpg);
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-size: auto, auto, cover;
+    text-align: center;
+    font-family: "Libre Baskerville", serif;
+    font-size: 3vh;
+    line-height: 5vh;
+  }
+  
+  .opacity {
+    opacity: 0.5;
+  }
+  
+  .darkGreen {
+    background: rgb(33, 66, 70);
+    font-family: font;
+    font-size: 7vh;
+    color: rgb(100, 123, 126);
+    text-align: center;
+    display: flex;
+    padding: 10pt 50pt;
+    justify-content: space-around;
+    bottom: 0;
+    line-height: normal;
+  }
+  .footer-icon {
+    background: rgb(33, 66, 70);
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+  }
+  
+  .footer-icon:hover {
+    background: rgb(100, 123, 126);
+    /* border-radius: 50%;
+    border: 1px solid black;
+    color: black; */
+    height: 60px;
+    width: 60px;
+    color: rgb(33, 66, 70);
+  }
+  
+  .column {
+    display: grid;
+    grid-template-columns: auto;
+    line-height: 4vh;
+    padding: 0;
+  }
+  
+  .lightGreen {
+    background: rgb(225, 234, 228);
+    margin-top: 7px;
+  }
+  
+  .column h1 {
+    font-family: "Julius Sans One", sans-serif;
+    font-size: 15px;
+    margin-top: 15px;
+  }
+  
+  .column p {
+    font-family: "Libre Baskerville", serif;
+    font-size: 2.5vh;
+    margin-bottom: 15px;
+  }
+  
+  .underline {
+    border-bottom: 1px solid rgba(189, 214, 199);
+    width: 100%;
+    text-align: left;
+  }
+  
+  .bamboo2 {
+    background-color: rgba(189, 214, 199, 0.6);
+    background-image: url(images/contours-opaque.png),
+      url(images/gridlines-opaque.png), url(images/bamboo.png);
+    background-attachment: scroll, scroll, fixed;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-size: auto, auto, cover;
+    display: flex;
+    flex-direction: column;
+  }
+  .bamboo2 p,
+  .bamboo2 h1,
+  .bamboo p,
+  .bamboo h1,
+  .white-page h1,
+  .white-page p {
+    padding: 0 10%;
+  }
+  .bamboo2{
+    padding: 10% 0;
+  }
+  .lightGreen h1,
+  .lightGreen p {
+    margin-left: 20%;
+  }
+  .footer footer {
+    height: 50px;
+    background-color: #e4ede8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .darkGreen {
+    padding: 25px 0;
+  }
+  @media only screen and (min-width: 500px) {
+    header {
+      background-position: left 40%, right 10px, right 10px, left 10px;
+    }
+  }
+  
+  @media only screen and (min-width: 1131px) {
+    #container {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+    }
+  
+    .circle {
+     /* position: relative; */
+     /* justify-content: center; */
+     background-position: right;
+    }
+  
+    main {
+      grid-column: 1 /2;
+      grid-row: 1/2;
+    }
+  
+    footer {
+      grid-column: 2 / 3;
+      grid-row: 1/ 2;
+      align-items: left;
+    }
+    .column {
+      display: grid;
+      grid-template-columns: auto;
+      padding-left: 0%;
+      width: 100%;
+    }
+    nav {
+      position: relative;
+      width: 25%;
+      right: 0;
+      left: 73%;
+      margin-bottom: 25%;
+    }
+  
+    #hidden {
+      display: block;
+    }
+    footer {
+      background: rgb(225, 234, 228);
+    }
+  
+    .test {
+      bottom: 0;
+      width: 150%;
+      grid-column: 1 / 3;
+    }
+    .lightGreen{
+      margin-top: 39px;
+    }
+    .bamboo2{
+      padding-bottom: 00px;
+    }
+  }
+  
