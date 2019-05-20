@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>Axios-Todo</title>
+</head>
+<body>
+    <h1>Axios Todo List</h1>
+    <form name="add-todo-form" id="list">
+        Item: <br>
+        <input type="text" name="title" placeholder="Title">
+        <br>
+        Price: <br>
+        <input type="number" name="price" placeholder="Price">
+        <br>
+        Image URL: <br>
+        <input type="url" name="imgUrl" placeholder="Image URL" id="image-input">
+        <br>
+        Description: <br>
+        <input type="text" name="description" placeholder="Description">
+        <br>
+        <button>Add todo</button>
+    </form>
+    <div id="todo-container">
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
